@@ -27,7 +27,11 @@ module.exports.setUsers = async (req, res) => {
 };
 
 module.exports.editUser = async (req, res) => {
-  // on récupère l'id du post qu'on veut modifier
+  // on récupère l'id du post qu'on veut modifir
+  console.log(req.params);
+  res
+    .status(200)
+    .json({ message: "les infomations ont été modifié avec succès" });
   const post = await UserModel.findById(req.params.id);
   // si on recupère pas l'id on envoie un message d'erreur
   if (!post) {

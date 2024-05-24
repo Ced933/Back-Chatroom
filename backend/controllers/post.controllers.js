@@ -15,6 +15,7 @@ module.exports.setPosts = async (req, res) => {
     message: req.body.message,
     firstname: req.body.firstname,
     lastname: req.body.lastname,
+    email: req.body.email,
   });
   res.status(200).json(post);
 };
